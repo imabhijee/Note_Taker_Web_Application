@@ -1,0 +1,22 @@
+<%- include("partials/mainNavbar") %> 
+<script>
+    document.title = "Create a new Note! | NoteTaker";
+</script>
+
+<section id="create-note" class="create-note">
+    <div class="container">
+        <form action="/create_note" method="post">
+            <div class="mb-3">
+                <label for="noteTitle"><h5>Title</h5></label>
+                <input type="text" name="titleContent" id="noteTitle" class="form-control" required><br>
+                <label for="noteArea"><h5>Create A Note Here!</h5></label><br>
+                <textarea name="noteContent" id="noteArea" cols="30" rows="10" class="form-control hyperLink" required></textarea><br>
+                <button type="submit" class="btn btn-lg btn-outline-success align-button">Create Note</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- <script src="../public/js/main.js"></script> -->
+
+<%- include("partials/footer") %> 

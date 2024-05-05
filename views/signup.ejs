@@ -1,0 +1,36 @@
+<%- include("partials/header") %> 
+
+<script>
+    document.title = "Create a NoteTaker Account! | NoteTaker";
+</script>
+
+<section id="login" class="login">
+    <div class="login-main container">
+        <div class="minimal-frame">
+            <img src="img/icon.png" alt="NoteTaker_Logo">
+            <h1 class="login-heading"><a href="/">NoteTaker</a></h1>
+            <p class="login-para">Remember everything securely.</p>
+            <h2 class="page-intro">Sign Up Here!</h2>
+            <p class="error-text"><%= errorMessages %> </p>
+            <form action="/signup" method="POST">
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="username" placeholder="Email Address" required autocomplete="off">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" name="password" placeholder="Password" required autocomplete="off">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg">Continue</button>
+                </div>
+            </form>
+            <div class="login-footer">
+                <h1 class="login-display">Already have an account?</h1>
+                <a href="/login" class="login-href">Sign In Here!</a>
+                <p class="policy-footer">By clicking on continue, you are agreeing to our <a href="/terms_of_use">Terms of Service</a> and <a href="privacy_policy">Privacy Policy.</a></p>
+                <p class="policy-footer">Copyright © <script>document.write(new Date().getFullYear())</script> NoteTaker | All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include("partials/footer") %> 
